@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16x16.png">
+    <link rel="manifest" href="../img/site.webmanifest">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title> DulceEmef: Contacto</title>
+</head>
+
+<body>
+    <div class="container">
+        <header id="top">
+            <!-- Logo-->
+            <div class="logo">
+                <h1>DulceEmef - Contacto</h1>
+                <a href="../index.html">
+                    <img src="../img/logo.png" alt="DulceEmef Logo" title="DulceEmef Logo" height="200" width="200">
+                </a>
+            </div>
+            <!-- Fin Logo-->
+            <!-- Menú Principal-->
+            <!--    Made by Erik Terwan    -->
+            <!--   24th of November 2015   -->
+            <!--        MIT License        -->
+            <div class="container-menu">
+                <nav role="navigation">
+                    <div id="menuToggle">
+                        <!--
+      A fake / hidden checkbox is used as click reciever,
+      so you can use the :checked selector on it.
+      -->
+                        <input id="mostrar-menu" type="checkbox" />
+
+                        <!--
+      Some spans to act as a hamburger.
+      
+      They are acting like a real hamburger,
+      not that McDonalds stuff.
+      -->
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                        <!--
+      Too bad the menu has to be inside of the button
+      but hey, it's pure CSS magic.
+      -->
+                        <ul id="menu" class="menu-hidden">
+                            <a href="../index.html">
+                                <li>Inicio</li>
+                            </a>
+                            <a href="./productos.html">
+                                <li>Productos</li>
+                            </a>
+                            <a href="./historia.html">
+                                <li>Historia</li>
+                            </a>
+                            <a href="./contacto.html">
+                                <li>Contacto</li>
+                            </a>
+                            <a href="./testimonios.html">
+                                <li>Testimonios</li>
+                            </a>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <!-- Fin Menú Principal-->
+
+        </header>
+        <main class="section__contacto">
+            <!-- Sección contacto -->
+            <section class="section__container__contacto">
+                <div class="section__container__encabezado">
+                    <h2>Contactanos</h2>
+                    <hr>
+                </div>
+                <form action="#" method="post" class="form__contacto">
+                    <div>
+                        <label for="name">Nombre</label>
+                        <input type="text" name="name" id="" placeholder="Tú nombre (*)" required>
+                    </div>
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="" placeholder="Tú email (*)" required>
+                    </div>
+                    <div>
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" name="telefono" id="" placeholder="Tú teléfono (*)" readonly>
+                    </div>
+                    <div>
+                        <label for="mensaje">Mensaje</label>
+                        <textarea name="mensaje" id="" cols="30" rows="10" placeholder="Tú mensaje (*)"
+                            required></textarea>
+                    </div>
+                    <div><span><i>Los campos con * son requeridos</i></span></div>
+                    
+                    <div>
+                        <input type="submit">
+                    </div>
+                </form>
+            </section>
+            <!-- Fin Sección contacto -->
+        </main>
+    </div>
+        <!--Footer-->
+        <footer>
+            <div class="footer__container">
+                <div class="footer__sec_left">
+                    <h3>CONTACTO</h3>
+                    <ul>
+                        <li><i class="fa fa-phone" aria-hidden="true"></i>+11 5454 1234</li>
+
+                        <li><i class="fa fa-map-marker" aria-hidden="true"></i>
+                            Av Córdoba 1200</li>
+                        <li><i class="fa fa-envelope" aria-hidden="true"></i>
+                            dulceemef@hotmail.com </li>
+                    </ul>
+                </div>
+                <div class="footer__sec_right">
+                    <h3>SEGUINOS EN</h3>
+                    <ul>
+                        <li><a href="#" class="fa fa-instagram"></a></li>
+                        <li><a href="#" class="fa fa-facebook"></a></li>
+                        <li><a href="#" class="fa fa-whatsapp"></a></li>
+
+                    </ul>
+                </div>
+                <p class="footer__copyright">© 2023 DulceEmef. Todos los derechos reservados.</p>
+                <p class="footer__irtop"><i class="fa fa-arrow-up" aria-hidden="true"></i>
+                    <a href="#top">
+                        Ir arriba</a>
+                </p>
+            </div>
+
+        </footer>
+        <!--Fin Footer-->
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var botonMostrar = document.getElementById('mostrar-menu');
+      var menu = document.getElementById('menu');
+  
+      botonMostrar.addEventListener('click', function() {
+        menu.classList.toggle('menu-hidden');
+      });
+    });
+  </script>
+</html>

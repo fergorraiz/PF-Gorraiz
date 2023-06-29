@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16x16.png">
+    <link rel="manifest" href="../img/site.webmanifest">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title> DulceEmef: Nuestros Productos</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <!-- Logo-->
+            <div class="logo">
+                <h1>DulceEmef - Nuestros Productos</h1>
+                <a href="../index.html">
+                    <img src="../img/logo.png" alt="DulceEmef Logo" title="DulceEmef Logo" height="200" width="200">
+                </a>
+            </div>
+            <!-- Fin Logo-->
+            <!-- Menú Principal-->
+            <!--    Made by Erik Terwan    -->
+            <!--   24th of November 2015   -->
+            <!--        MIT License        -->
+            <div class="container-menu">
+                <nav role="navigation">
+                    <div id="menuToggle">
+                        <!--
+      A fake / hidden checkbox is used as click reciever,
+      so you can use the :checked selector on it.
+      -->
+                        <input id="mostrar-menu" type="checkbox" />
+
+                        <!--
+      Some spans to act as a hamburger.
+      
+      They are acting like a real hamburger,
+      not that McDonalds stuff.
+      -->
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                        <!--
+      Too bad the menu has to be inside of the button
+      but hey, it's pure CSS magic.
+      -->
+                        <ul id="menu" class="menu-hidden">
+                            <a href="../index.html">
+                                <li>Inicio</li>
+                            </a>
+                            <a href="./productos.html">
+                                <li>Productos</li>
+                            </a>
+                            <a href="./historia.html">
+                                <li>Historia</li>
+                            </a>
+                            <a href="./contacto.html">
+                                <li>Contacto</li>
+                            </a>
+                            <a href="./testimonios.html">
+                                <li>Testimonios</li>
+                            </a>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <!-- Fin Menú Principal-->
+        </header>
+        <main>
+            <!--Productos-->
+            <section class="section__productos">
+                <div class="section__container__encabezado">
+                    <h2>Nuestros productos</h2>
+                    <hr>
+                </div>
+                <div class="section__card__products">
+                    <article class="card__product">
+                        <h3>Alfajores</h3>
+                        <img src="../img/alfajores.jpg" alt="Alfajores" title="Alfajores" width="200px" height="200px">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat dolorum iure suscipit ab?
+                            Modi
+                            laboriosam impedit, libero ea molestias voluptas repellat delectus minima voluptatibus ex
+                            inventore minus veritatis nihil obcaecati!</p>
+                    </article>
+                    <article class="card__product">
+                        <h3>Galletitas</h3>
+                        <img src="../img/masitas.jpg" alt="Masitas de chocolate" title="Masitas de chocolate"
+                            width="200px" height="200px">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat dolorum iure suscipit ab?
+                            Modi
+                            laboriosam impedit, libero ea molestias voluptas repellat delectus minima voluptatibus ex
+                            inventore minus veritatis nihil obcaecati!</p>
+                    </article>
+                    <article class="card__product">
+                        <h3>Tortas</h3>
+                        <img src="../img/cheesecake.jpg" alt="Cheesecake" title="Cheesecake" width="200px"
+                            height="200px">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat dolorum iure suscipit ab?
+                            Modi
+                            laboriosam impedit, libero ea molestias voluptas repellat delectus minima voluptatibus ex
+                            inventore minus veritatis nihil obcaecati!</p>
+                    </article>
+                    <article class="card__product">
+                        <h3>Salados</h3>
+                        <img src="../img/salados.jpg" alt="Sanguche" title="Sanguche" width="200px" height="200px">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat dolorum iure suscipit ab?
+                            Modi
+                            laboriosam impedit, libero ea molestias voluptas repellat delectus minima voluptatibus ex
+                            inventore minus veritatis nihil obcaecati!</p>
+                    </article>
+            </section>
+    </div>
+
+    <!--Fin Productos-->
+
+    </main>
+    </div>
+    <!--Footer-->
+    <footer>
+        <div class="footer__container">
+            <div class="footer__sec_left">
+                <h3>CONTACTO</h3>
+                <ul>
+                    <li><i class="fa fa-phone" aria-hidden="true"></i>+11 5454 1234</li>
+
+                    <li><i class="fa fa-map-marker" aria-hidden="true"></i>
+                        Av Córdoba 1200</li>
+                    <li><i class="fa fa-envelope" aria-hidden="true"></i>
+                        dulceemef@hotmail.com </li>
+                </ul>
+            </div>
+            <div class="footer__sec_right">
+                <h3>SEGUINOS EN</h3>
+                <ul>
+                    <li><a href="#" class="fa fa-instagram"></a></li>
+                    <li><a href="#" class="fa fa-facebook"></a></li>
+                    <li><a href="#" class="fa fa-whatsapp"></a></li>
+
+                </ul>
+            </div>
+            <p class="footer__copyright">© 2023 DulceEmef. Todos los derechos reservados.</p>
+            <p class="footer__irtop"><i class="fa fa-arrow-up" aria-hidden="true"></i>
+                <a href="#top">
+                    Ir arriba</a>
+            </p>
+        </div>
+
+    </footer>
+    <!--Fin Footer-->
+
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var botonMostrar = document.getElementById('mostrar-menu');
+        var menu = document.getElementById('menu');
+
+        botonMostrar.addEventListener('click', function () {
+            menu.classList.toggle('menu-hidden');
+        });
+    });
+</script>
+
+</html>

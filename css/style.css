@@ -1,0 +1,819 @@
+/* GLOBALES */
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+
+}
+
+:root {
+    --border-color: #C6C8C0;
+    --margin: 1rem;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #E5E6E0;
+    font-family: "Open sans", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+p {
+    color: #555;
+    padding-top: 10px;
+
+}
+
+label {
+    font-weight: 600;
+}
+
+input {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* ENCABEZADO Y MENU*/
+.logo {
+    height: 120px;
+    width: 200px;
+}
+
+.logo img {
+    height: 100%;
+    width: 100%t;
+    object-fit: cover;
+}
+
+.logo h1 {
+    height: 0;
+    margin: 0;
+    text-indent: -999px;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin: 0 var(--margin);
+
+
+}
+
+
+section h3 {
+    text-align: center;
+}
+
+/*hamburger menu*/
+
+.menu-hidden {
+
+    display: none;
+  }
+  
+  #menu:not(.menu-hidden) {
+
+    display: block;
+  }
+  
+
+#menuToggle {
+    display: block;
+    position: relative;
+    top: 50px;
+    left: -10x;
+
+    z-index: 1;
+
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+#menuToggle a {
+    text-decoration: none;
+    color: #232323;
+
+    transition: color 0.3s ease;
+}
+
+#menuToggle a:hover {
+    color: #FF8800;
+}
+
+
+#menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+
+    cursor: pointer;
+
+    opacity: 0;
+    /* hide this */
+    z-index: 2;
+    /* and place it over the hamburger */
+
+    -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+
+    background: #000;
+    border-radius: 3px;
+
+    z-index: 1;
+
+    transform-origin: 4px 0px;
+
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+    transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked~span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #000;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked~span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked~span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu {
+    position: absolute;
+    width: 300px;
+    margin: -100px 0 0 -150px;
+    padding: 50px;
+    padding-top: 125px;
+    border-radius: 50% 0 0 0;
+    border: 2px solid var(--border-color);
+    background: #fff;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+
+    transform-origin: 0% 0%;
+    transform: translate(100%, 0);
+
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+#menu li {
+    padding: 10px 0;
+    font-size: 1.5em;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked~ul {
+    transform: none;
+}
+
+/* MAIN*/
+.section__slider {
+    height: 200px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border: 2px solid --border-color;
+    border-left: none;
+    border-right: none;
+    background-image: url(../img/slider.jpg);
+    background-attachment: fixed;
+    background-size: auto;
+    opacity: 0.6;
+    -webkit-transition: opacity 2s ease-in-out;
+    -ms-transition: opacity 2s ease-in-out;
+    transition: opacity 2s ease-in-out;
+
+}
+
+.section__slider:hover {
+    opacity: 1;
+    -webkit-transition: opacity 3s ease;
+    -ms-transition: opacity 3s ease;
+    transition: opacity 3s ease;
+
+}
+
+.container,
+.section__container {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.section__container {
+
+    gap: 1rem;
+}
+
+.section__article {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    text-align: center;
+    gap: 1rem;
+}
+
+.article__card {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    margin: 0 var(--margin);
+    padding: 1rem;
+
+}
+
+.article__card svg {
+    height: 70px;
+    width: 100%;
+}
+
+.article__card:hover {
+    -webkit-box-shadow: 0px 0px 30px -1px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0px 0px 30px -1px rgba(0, 0, 0, 1);
+    box-shadow: 0px 0px 30px -1px rgba(0, 0, 0, 1);
+    transition: box-shadow 1s ease-in;
+
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+section:first-child h2 {
+    text-align: center;
+}
+
+.section__container__encabezado hr {
+    
+    max-width: 200px;
+    margin: 0 auto;
+    border: 1px dashed;
+    border-color: var(--border-color);
+}
+
+.section__escribinos,
+.section__contacto,
+.footer__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 1rem;
+    margin: var(--margin);    
+}
+
+
+.form__contacto div {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    margin-left: 0px;
+
+}
+
+.form__contacto div:last-child {
+    width: 50%;
+
+}
+
+.form__contacto div input {
+    height: 40px;
+}
+
+.form__contacto div input,
+.form__contacto div textarea {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.form__contacto div input,
+.form__contacto div textarea {
+    margin: 10px 0;
+}
+
+.form__contacto div input:hover,
+.form__contacto div textarea:hover {
+
+    -webkit-transition: border-color 1s ease-in;
+    -ms-transition: border-color 1s ease-in;
+    transition: border-color 1s ease-in;
+    border-color: #000;
+
+}
+
+.form__contacto div:last-child input {
+    font-weight: bold;
+    width: 140px;
+}
+
+.form__contacto div:last-child input:hover {
+    -webkit-transition: background-color 1s ease;
+    -moz-transition: background-color 1s ease;
+    transition: background-color 1s ease;
+    background-color: #CCCEC7;
+    cursor: pointer;
+
+}
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #C8CBC4;
+    color: #000;
+
+}
+
+.footer__container p {
+    text-align: center;
+}
+
+
+.footer__sec_left h3,
+.footer__sec_right h3 {
+    margin-bottom: var(--margin);
+}
+
+.footer__sec_right ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem
+}
+
+.footer__irtop a:hover {
+
+    text-decoration: underline;
+}
+
+/*ICONOS REDES SOCIALES**/
+
+.fa {
+    padding: 10px;
+    font-size: 15px;
+    width: 35px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+}
+
+.fa-facebook:hover,
+.fa-instagram:hover,
+.fa-whatsapp:hover {
+    opacity: 0.7;
+}
+
+.fa-whatsapp {
+    background: #64D984;
+    color: white;
+
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-instagram {
+    background: #125688;
+    color: white;
+}
+
+
+/*PAGINA CONTACTO*/
+
+
+.section__container__contacto {
+    background-color: #fff;
+}
+
+.section__container__contacto .form__contacto {
+    background-color: #C8CBC4;
+    margin-top: var(--margin);
+    padding: 1rem;
+}
+
+/*PAGINA HISTORIA*/
+.container__aboutus {
+    display: flex;
+    flex-direction: column;
+    margin: var(--margin);
+}
+
+.section__container__aboutus {
+    margin-top: 10px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: var(--margin);
+}
+
+.section__container__aboutus img {
+    width: 100%;
+    height: auto;
+
+}
+
+.section__container__aboutus p {
+    text-align: center;
+    line-height: 1.8rem;
+}
+
+/*PAGINA TESTIMIONIOS*/
+
+.section__testimonios {
+    display: flex;
+    flex-direction: column;
+    margin: var(--margin);
+}
+
+.section__testimonios article {
+    border: 1px solid #C6C8C0;
+}
+
+.section__testimonios article:nth-of-type(-n+3) {
+    margin-top: 20px;
+}
+
+.section__testimonios article:nth-of-type(n+3) {
+    margin-bottom: 20px;
+}
+
+.section__testimonios p {
+    line-height: 1.5rem;
+    color: #808080;
+}
+
+.section__testimonios>p {
+
+    width: auto;
+    margin: var(--margin) auto;
+    padding: 1rem;
+    text-align: justify;
+    border-left: 5px inset #C6C8C0;
+    box-sizing: border-box;
+    background-color: #fff;
+
+}
+
+.section__testimonios img {
+    display: block;
+    margin: 10px auto;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+
+}
+
+.testimonios__card__rounded {
+    /*border-radius: 15px 15px 15px 70px;*/
+    background-color: #fff;
+    padding: 1rem;
+    box-sizing: border-box;
+
+}
+
+
+.testimonios__card__rounded p {
+    box-sizing: border-box;
+    text-align: center;
+
+}
+
+/* PAGINA PRODUCTOS*/
+
+.section__productos {
+    margin: var(--margin);
+}
+
+.card__product {
+    background-color: #fff;
+    padding: 1rem;
+    text-align: center;
+
+}
+
+.card__product h3 {
+    margin-bottom: var(--margin);
+}
+
+.section__card__products {
+
+    display: grid;
+    grid-template-columns: 300px;
+    gap: 1rem;
+    margin-top: var(--margin);
+    justify-content: space-around;
+
+}
+
+.section__testimonios img {
+    display: block;
+    margin: 10px auto;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+
+}
+
+@media(min-width:768px) {
+
+
+    .logo {
+        height: 200px;
+        width: 200px;
+    }
+  
+    /*PAGINA INICIO*/
+
+    .section__slider {
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+    .section__escribinos {
+        padding: 1rem;
+    }
+    header,
+    .section__productos,
+    .section__article,
+    .section__escribinos,
+    .section__contacto,
+    .container__aboutus,
+    .footer__container {
+
+        width: 80%;
+        align-self: center;
+
+    }
+
+    /*PAGINA PRODUCTOS*/
+    .section__card__products {
+
+        grid-template-columns: repeat(2, 300px);
+        justify-content: space-evenly;
+
+    }
+
+    /*PAGINA NOSOTROS*/
+    .section__container__aboutus{
+        margin:0;
+    }
+    .section__container__aboutus img {
+        width: 100%;
+        max-height: 500px;
+        object-fit: cover;
+    }
+    .section__container__aboutus p {
+        text-align: justify;
+        padding: 1rem
+    }
+    /*PAGINA CONTACTO*/
+    .section__contacto {
+        padding: 1rem;
+        margin-bottom: 0px;
+    }        
+
+    /*PAGINA TESTIMONIOS*/
+    .section__testimonios {
+        align-self: center;
+    }
+
+}
+
+@media(min-width:768px) and (orientation:landscape) {
+
+    .footer__container{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "contacto redes"
+                            "footer-copyright footer-copyright"
+                            "irtop irtop" ;
+    }
+    .footer__sec_left{
+        grid-area: contacto;
+    }
+    .footer__sec_right{
+        grid-area: redes;
+        justify-self:end;
+    }
+    .footer__copyright{
+        grid-area: footer-copyright;
+    }
+    .footer__irtop{
+        grid-area: irtop;
+    }
+
+    /*PAGINA NOSOTROS*/
+    .section__container__aboutus {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+    }
+
+    .section__container__aboutus img {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        object-fit: cover;
+        border-radius: 50%;
+        margin:10px 0 10px 10px;
+        
+    }
+
+    .section__container__aboutus p{
+        max-width: 600px;
+    }
+
+    /*PAGINA TESTIMONIOS*/
+    .section__testimonios {
+        max-width: 80%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .testimonios__card__rounded {
+        align-self: center;
+        justify-self: center;
+    }
+}
+
+@media(min-width:1024px) {
+
+
+    /*PAGINA INICIO*/
+    .section__article {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-row: 1fr;
+    }
+
+    .article__card {
+        border-radius: 10px;
+        padding: 1rem;
+        max-width: 500px;
+    }
+
+    .section__escribinos h3 {
+        margin-left: 0px;
+    }
+
+    .form__contacto {
+        width: 50%;
+        max-width: 700px;
+    }
+    /*PAGINA PRODUCTOS*/
+    .section__card__products {
+
+        grid-template-columns: repeat(2, 300px);
+        justify-content: space-evenly;
+
+    }
+
+
+    /*PAGINA CONTACTO*/
+    .section__contacto{
+        width: 100%;
+        background-image: url("../img/contact.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-color: white;
+                
+    }
+    .section__container__contacto{
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+        background-color: transparent;
+    }
+    .section__container__contacto .form__contacto{
+        width: 50%;
+        max-width: 700px;
+
+    }
+    /*PAGINA TESTIMIONIOS*/
+    .section__testimonios{
+        width: 80%;
+    }
+}
+
+@media(min-width:1200px)
+{
+
+        /*MENU*/
+        #menuToggle span{
+            display: none;
+        }
+        #menu {
+            display: inline;
+            position:unset;
+            margin: 0;
+            padding: 50px;
+            list-style-type: none;
+            transform: none;
+            background: none;
+            border: none;
+            
+          }
+        
+        #menu a:first-child li{
+            border-left: none;
+        }
+        #menu a li{
+            display: inline-block;
+            border-left: 1px rgba(104, 79, 64, 0.2) solid;
+            text-transform: uppercase;
+            padding: 1rem;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+        /*PAGINA NOSOTROS*/
+        .container__aboutus{
+            align-items: center;
+        }
+
+        /*PAGINA TESTIMONIOS*/
+        .section__testimonios{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-areas:"encabezado encabezado encabezado" 
+                                "parrafo parrafo parrafo";
+            gap:1rem;                            
+        }
+        .section__container__encabezado{
+            grid-area: encabezado;
+        }
+        .section__testimonios article{
+            border-radius: 15px 15px 15px 70px;
+        }
+        .section__testimonios p{
+            grid-area: parrafo;
+            max-width: 700px;
+        }
+        .section__testimonios article:nth-of-type(n+3){
+            margin-bottom: 0px;
+        }
+        .testimonios__card__rounded{
+            max-width: 400px;
+            
+        }
+}
