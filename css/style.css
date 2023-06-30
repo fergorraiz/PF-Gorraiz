@@ -71,7 +71,6 @@ header {
 
 }
 
-
 section h3 {
     text-align: center;
 }
@@ -345,8 +344,6 @@ section:first-child h2 {
     box-sizing: border-box;
 }
 
-
-
 .form__contacto div input:hover,
 .form__contacto div textarea:hover {
 
@@ -440,8 +437,6 @@ footer {
 
 
 /*PAGINA CONTACTO*/
-
-
 .section__container__contacto {
     background-color: #fff;
 }
@@ -526,13 +521,12 @@ footer {
 }
 
 .testimonios__card__rounded {
-    /*border-radius: 15px 15px 15px 70px;*/
+
     background-color: #fff;
     padding: 1rem;
     box-sizing: border-box;
 
 }
-
 
 .testimonios__card__rounded p {
     box-sizing: border-box;
