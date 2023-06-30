@@ -333,19 +333,18 @@ section:first-child h2 {
 
 .form__contacto div input {
     height: 40px;
-}
-
-.form__contacto div input,
-.form__contacto div textarea {
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
+    background-color: #f0f0f0;
 }
 
 .form__contacto div input,
 .form__contacto div textarea {
     margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
 }
+
+
 
 .form__contacto div input:hover,
 .form__contacto div textarea:hover {
