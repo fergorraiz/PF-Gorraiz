@@ -339,6 +339,7 @@ section:first-child h2 {
 .form__contacto div input,
 .form__contacto div textarea {
     margin: 10px 0;
+    padding: .375rem .75rem;
     border-radius: 5px;
     border: 1px solid #ccc;
     box-sizing: border-box;
