@@ -4,8 +4,9 @@
     padding: 0;
     list-style: none;
     box-sizing: border-box;
-
+    
 }
+
 
 :root {
     --border-color: #C6C8C0;
@@ -41,6 +42,11 @@ label {
 input {
     border: 1px solid #ccc;
     border-radius: 5px;
+}
+
+input:focus, textarea:focus, a:focus-visible{
+    outline: 1px solid #000 ;        
+    transition: outline 1s ease-in;
 }
 
 /* ENCABEZADO Y MENU*/
@@ -229,8 +235,7 @@ section h3 {
     border-left: 0px;
     border-right: 0px;
     background-image: url(../img/slider.jpg);
-    background-attachment: fixed;
-    background-size: auto;
+    background-attachment:fixed;
     opacity: 0.6;
     -webkit-transition: opacity 2s ease-in-out;
     -ms-transition: opacity 2s ease-in-out;
@@ -799,7 +804,10 @@ footer {
         font-weight: 700;
         font-size: 1.1rem;
     }
-
+    /*PAGINA INICIO*/
+    .section__slider{
+        height: 300px;
+    }
     /*PAGINA NOSOTROS*/
     .container__aboutus {
         align-items: center;
@@ -839,4 +847,10 @@ footer {
 
     }
 }
-
+@media (min-width:1400px)
+{
+  /*PAGINA INICIO*/
+  .section__slider{
+    height: 400px;
+}
+}
