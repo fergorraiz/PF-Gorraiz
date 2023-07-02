@@ -4,9 +4,8 @@
     padding: 0;
     list-style: none;
     box-sizing: border-box;
-    
-}
 
+}
 
 :root {
     --border-color: #C6C8C0;
@@ -44,8 +43,10 @@ input {
     border-radius: 5px;
 }
 
-input:focus, textarea:focus, a:focus-visible{
-    outline: 1px solid #000 ;        
+input:focus,
+textarea:focus,
+a:focus-visible {
+    outline: 1px solid #000;
     transition: outline 1s ease-in;
 }
 
@@ -235,7 +236,7 @@ section h3 {
     border-left: 0px;
     border-right: 0px;
     background-image: url(../img/slider.jpg);
-    background-attachment:fixed;
+    background-attachment: fixed;
     opacity: 0.6;
     -webkit-transition: opacity 2s ease-in-out;
     -ms-transition: opacity 2s ease-in-out;
@@ -715,7 +716,7 @@ footer {
     .section__article {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        
+
     }
 
     .article__card {
@@ -753,7 +754,7 @@ footer {
 
     .section__container__contacto {
         display: flex;
-        flex-direction: column;        
+        flex-direction: column;
         align-items: center;
         background-color: transparent;
     }
@@ -771,6 +772,7 @@ footer {
 }
 
 @media(min-width:1200px) {
+
     main {
         min-height: 100vh;
     }
@@ -804,18 +806,22 @@ footer {
         font-weight: 700;
         font-size: 1.1rem;
     }
+
     /*PAGINA INICIO*/
-    .section__slider{
+    .section__slider {
         height: 300px;
     }
+
     /*PAGINA NOSOTROS*/
     .container__aboutus {
         align-items: center;
     }
-     /*PAGINA CONTACTO*/
-     .section__contacto {        
+
+    /*PAGINA CONTACTO*/
+    .section__contacto {
         background-size: cover;
     }
+
     /*PAGINA TESTIMONIOS*/
     .section__testimonios {
         display: grid;
@@ -847,10 +853,11 @@ footer {
 
     }
 }
-@media (min-width:1400px)
-{
-  /*PAGINA INICIO*/
-  .section__slider{
-    height: 400px;
-}
+
+@media (min-width:1400px) {
+
+    /*PAGINA INICIO*/
+    .section__slider {
+        height: 400px;
+    }
 }
