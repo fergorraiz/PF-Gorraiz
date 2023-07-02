@@ -51,13 +51,13 @@ input:focus, textarea:focus, a:focus-visible{
 
 /* ENCABEZADO Y MENU*/
 .logo {
-    height: 120px;
+    height: 150px;
     width: 200px;
 }
 
 .logo img {
     height: 100%;
-    width: 100%t;
+    width: 100%;
     object-fit: cover;
 }
 
