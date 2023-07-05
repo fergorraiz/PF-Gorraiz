@@ -82,7 +82,7 @@ section h3 {
     text-align: center;
 }
 
-/*hamburger menu*/
+/*Menu hamburguesa*/
 
 .menu-hidden {
 
@@ -130,16 +130,11 @@ section h3 {
     cursor: pointer;
 
     opacity: 0;
-    /* hide this */
     z-index: 2;
-    /* and place it over the hamburger */
-
+    
     -webkit-touch-callout: none;
 }
 
-/*
- * Just a quick hamburger
- */
 #menuToggle span {
     display: block;
     width: 33px;
@@ -167,35 +162,22 @@ section h3 {
     transform-origin: 0% 100%;
 }
 
-/* 
- * Transform all the slices of hamburger
- * into a crossmark.
- */
 #menuToggle input:checked~span {
     opacity: 1;
     transform: rotate(45deg) translate(-2px, -1px);
     background: #000;
 }
 
-/*
- * But let's hide the middle one.
- */
 #menuToggle input:checked~span:nth-last-child(3) {
     opacity: 0;
     transform: rotate(0deg) scale(0.2, 0.2);
 }
 
-/*
- * Ohyeah and the last one should go the other direction
- */
+
 #menuToggle input:checked~span:nth-last-child(2) {
     transform: rotate(-45deg) translate(0, -1px);
 }
 
-/*
- * Make this absolute positioned
- * at the top left of the screen
- */
 #menu {
     position: absolute;
     width: 300px;
@@ -206,8 +188,7 @@ section h3 {
     border: 2px solid var(--border-color);
     background: #fff;
     list-style-type: none;
-    -webkit-font-smoothing: antialiased;
-    /* to stop flickering of text in safari */
+    -webkit-font-smoothing: antialiased;    
 
     transform-origin: 0% 0%;
     transform: translate(100%, 0);
@@ -220,14 +201,11 @@ section h3 {
     font-size: 1.5em;
 }
 
-/*
- * And let's slide it in from the left
- */
 #menuToggle input:checked~ul {
     transform: none;
 }
 
-/* MAIN*/
+/*MAIN*/
 .section__slider {
     height: 200px;
     margin-top: 2%;
@@ -286,13 +264,7 @@ section h3 {
     width: 100%;
 }
 
-.article__card:hover {
-    -webkit-box-shadow: 0px 0px 30px -1px rgba(0, 0, 0, 1);
-    -moz-box-shadow: 0px 0px 30px -1px rgba(0, 0, 0, 1);
-    box-shadow: 0px 0px 30px -1px rgba(0, 0, 0, 1);
-    transition: box-shadow 1s ease-in;
 
-}
 
 main {
     display: flex;
@@ -531,8 +503,9 @@ footer {
     background-color: #fff;
     padding: 1rem;
     box-sizing: border-box;
-
 }
+
+
 
 .testimonios__card__rounded p {
     box-sizing: border-box;
@@ -550,11 +523,14 @@ footer {
     background-color: #fff;
     padding: 1rem;
     text-align: center;
-
 }
 
 .card__product h3 {
     margin-bottom: var(--margin);
+}
+
+.card__product p {
+    line-height: 1.5rem;
 }
 
 .section__card__products {
@@ -723,6 +699,14 @@ footer {
         border-radius: 10px;
         padding: 1rem;
         max-width: 500px;
+        transition: box-shadow 1s ease-out;
+    }
+
+    .article__card:hover {
+        -webkit-box-shadow: 0px 0px 30px -1px rgba(0, 0, 0, 1);
+        -moz-box-shadow: 0px 0px 30px -1px rgba(0, 0, 0, 1);
+        box-shadow: 0px 0px 30px -1px rgba(0, 0, 0, 1);
+        transition: box-shadow 1s ease-in;
     }
 
     .section__escribinos h3 {
@@ -791,7 +775,6 @@ footer {
         transform: none;
         background: none;
         border: none;
-
     }
 
     #menu a:first-child li {
@@ -826,10 +809,12 @@ footer {
     .section__testimonios {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
         grid-template-areas: "encabezado encabezado encabezado"
             "parrafo parrafo parrafo";
         gap: 1rem;
     }
+
 
     .section__testimonios .section__container__encabezado {
         grid-area: encabezado;
@@ -850,7 +835,25 @@ footer {
 
     .testimonios__card__rounded {
         max-width: 400px;
+        padding: 1rem;
+        height: 350px;
+    }
 
+    /*TRANSICIONES CARDS*/
+    .card__product,
+    .testimonios__card__rounded {
+        -webkit-box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+        box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+        -webkit-transition: all 400ms ease-out;
+        transition: all 400ms ease-out;
+    }
+
+    .card__product:hover,
+    .testimonios__card__rounded:hover {
+        -webkit-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+        box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+        -webkit-transform: translateY(-3%);
+        transform: translateY(-3%);
     }
 }
 
