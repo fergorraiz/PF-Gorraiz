@@ -1,0 +1,119 @@
+.section__slider {
+    height: 200px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border: 2px ridge $border-color;
+    border-left: 0px;
+    border-right: 0px;
+    background-image: url(../img/slider.jpg);
+    background-attachment: fixed;
+    opacity: 0.6;
+    -webkit-transition: opacity 2s ease-in-out;
+    -ms-transition: opacity 2s ease-in-out;
+    transition: opacity 2s ease-in-out;
+
+    &:hover {
+        opacity: 1;
+        -webkit-transition: opacity 3s ease;
+        -ms-transition: opacity 3s ease;
+        transition: opacity 3s ease;
+    }
+
+}
+
+.section__container {
+    @include flex-column;
+    gap: 1rem;
+
+}
+
+.section__article {
+    @include grid-1fr;
+    margin: 0;
+    text-align: center;
+
+}
+
+.article__card {
+    @include flex-column;
+    background-color: #ffffff;
+    margin: 0 $margin;
+    padding: 1rem;
+
+}
+
+.article__card svg {
+    height: 70px;
+    width: 100%;
+}
+
+.section__escribinos {
+    @include grid-1fr;
+}
+
+@media(min-width:768px) {
+    .section {
+        &__slider {
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+
+        &__escribinos,
+        &__article {
+            @include col-md;
+        }
+
+        &__escribinos {
+            padding: 1rem;
+        }
+    }
+
+}
+
+@media(min-width:1024px) {
+
+    .section__article {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+    }
+
+    .article__card {
+        border-radius: 10px;
+        padding: 1rem;
+        max-width: 500px;
+        transition: box-shadow 1s ease-out;
+
+        &:hover {
+            -webkit-box-shadow: 0px 0px 30px -1px rgba(0, 0, 0, 1);
+            -moz-box-shadow: 0px 0px 30px -1px rgba(0, 0, 0, 1);
+            box-shadow: 0px 0px 30px -1px rgba(0, 0, 0, 1);
+            transition: box-shadow 1s ease-in;
+        }
+    }
+
+    .section__escribinos {
+
+        & h3 {
+            margin-left: 0px;
+        }
+
+    }
+
+
+
+}
+@media(min-width:1200px) {
+
+    .section__slider {
+        height: 300px;
+    }
+
+}
+@media(min-width:1400px) {
+
+    .section__slider {
+        height: 400px;
+    }
+
+}

@@ -1,0 +1,120 @@
+.section__testimonios {
+    @include flex-column;
+    margin: $margin;
+
+    & article {
+        border: 1px solid #C6C8C0;
+
+        &:nth-of-type(-n+3) {
+            margin-top: 20px;
+        }
+
+        &:nth-of-type(n+3) {
+            margin-bottom: 20px;
+        }
+    }
+
+    & p {
+        line-height: 1.5rem;
+        color: #808080;
+    }
+
+    &>p {
+        width: auto;
+        margin: $margin auto;
+        padding: 1rem;
+        text-align: justify;
+        border-left: 5px inset #C6C8C0;
+        box-sizing: border-box;
+        background-color: #fff;
+    }
+
+    & img {
+        display: block;
+        margin: 10px auto;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+    }
+
+}
+
+
+.testimonios__card__rounded {
+
+    background-color: #fff;
+    padding: 1rem;
+    box-sizing: border-box;
+
+    & p {
+        box-sizing: border-box;
+        text-align: center;
+    }
+}
+
+@media(min-width:768px) {
+    .section__testimonios {
+        @include col-md;
+        margin-bottom: 1rem;
+    }
+
+}
+
+@media(min-width:768px) and (orientation:landscape) {
+
+    .section__testimonios {
+
+        justify-content: center;
+        align-items: center;
+    }
+
+    .testimonios__card__rounded {
+        align-self: center;
+        justify-self: center;
+
+    }
+
+}
+
+@media(min-width:1200px) {
+
+    .section__testimonios {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        grid-template-areas: "encabezado encabezado encabezado"
+            "parrafo parrafo parrafo";
+        gap: 1rem;
+
+        & .section__container__encabezado {
+            grid-area: encabezado;
+        }
+
+        & article {
+            border-radius: 15px 15px 15px 70px;
+
+            &:nth-of-type(n+3) {
+                margin-bottom: 0px;
+            }
+        }
+
+        & p {
+            grid-area: parrafo;
+            max-width: 700px;
+        }
+
+    }
+
+    .testimonios__card__rounded {
+        max-width: 400px;
+        padding: 1rem;
+        height: 350px;
+        @include card-transition;
+
+        &:hover {
+            @include card-transition-hover;
+        }
+
+    }
+
+}

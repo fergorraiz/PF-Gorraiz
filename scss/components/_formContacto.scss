@@ -1,0 +1,54 @@
+@mixin form-field{
+    margin: 10px 0;
+    padding: .375rem .75rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.form__contacto{
+    & div{
+        @include grid-1fr;
+        gap:0;
+        margin: 0px;
+
+        &:last-child{
+            width: 50%;
+            input {
+                font-weight: bold;
+                background-color: #f0f0f0;
+                color: #000;
+                width: 140px;
+
+            &:hover{
+                -webkit-transition: background-color 1s ease;
+                -moz-transition: background-color 1s ease;
+                transition: background-color 1s ease;
+                background-color: #CCCEC7;
+                cursor: pointer;
+            }
+            }
+        }
+        & input{
+            height: 40px;
+            @include form-field;
+        }
+        & textarea{
+            @include form-field;
+        }
+        & input:hover, & textarea:hover{
+            -webkit-transition: border-color 1s ease-in;
+            -ms-transition: border-color 1s ease-in;
+            transition: border-color 1s ease-in;
+            border-color: #000;
+        }
+    }
+}
+@media(min-width:1024px){
+    .form__contacto {
+        width: 50%;
+        max-width: 700px;
+    }
+
+}
+
+
