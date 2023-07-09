@@ -619,6 +619,7 @@ section h3 {
     width: 80%;
     max-width: 1400px;
     align-self: center;
+    max-width: 100%;
     margin-bottom: 0;
     padding: 1rem 0;
   }
