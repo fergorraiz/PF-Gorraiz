@@ -136,6 +136,7 @@ footer {
 @media (min-width: 768px) {
   .footer__container {
     width: 80%;
+    max-width: 1400px;
     align-self: center;
   }
 }
@@ -285,6 +286,7 @@ section h3 {
   }
   header {
     width: 80%;
+    max-width: 1400px;
     align-self: center;
   }
 }
@@ -435,6 +437,7 @@ section h3 {
   }
   .section__escribinos, .section__article {
     width: 80%;
+    max-width: 1400px;
     align-self: center;
   }
   .section__escribinos {
@@ -499,6 +502,7 @@ section h3 {
 @media (min-width: 768px) {
   .section__productos {
     width: 80%;
+    max-width: 1400px;
     align-self: center;
   }
   .section__card__products {
@@ -544,6 +548,7 @@ section h3 {
 @media (min-width: 768px) {
   .container__aboutus {
     width: 80%;
+    max-width: 1400px;
     align-self: center;
     margin-bottom: 1rem;
   }
@@ -612,6 +617,7 @@ section h3 {
 @media (min-width: 768px) {
   .section__contacto {
     width: 80%;
+    max-width: 1400px;
     align-self: center;
     margin-bottom: 0;
     padding: 1rem 0;
@@ -689,6 +695,7 @@ section h3 {
 @media (min-width: 768px) {
   .section__testimonios {
     width: 80%;
+    max-width: 1400px;
     align-self: center;
     margin-bottom: 1rem;
   }

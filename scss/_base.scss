@@ -75,6 +75,7 @@ textarea {
 
 @mixin col-md {
     width: 80%;
+    max-width: 1400px;
     align-self: center;
 }
 
