@@ -12,12 +12,14 @@
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title> DulceEmef: Nuestros Productos</title>
 </head>
 
 <body>
     <div class="container">
-        <header>
+        <header id="top">
             <!-- Logo-->
             <div class="logo">
                 <h1>DulceEmef - Nuestros Productos</h1>
@@ -60,7 +62,7 @@
             <!--Productos-->
             <section class="section__productos">
                 <div class="section__container__encabezado">
-                    <h2>Nuestros productos</h2>
+                    <h2 class="animate__animated animate__backInLeft">Nuestros productos</h2>
                     <hr>
                 </div>
                 <div class="section__card__products">
@@ -68,24 +70,38 @@
                         <h3>Alfajores</h3>
                         <img src="../img/alfajores.jpg" alt="Alfajores" title="Alfajores" width="200px" height="200px">
                         <p>
-                            Nuestros alfajores caseros de chocolate son irresistibles. Con galletas de chocolate suaves, dulce de leche casero y una cubierta de chocolate, cada bocado es un placer indulgente. Son el resultado de nuestra dedicación por crear productos de alta calidad que deleiten a los amantes del chocolate. ¡Prueba nuestros deliciosos alfajores y déjate llevar por su increíble sabor!</p>
+                            Nuestros alfajores caseros de chocolate son irresistibles. Con galletas de chocolate suaves,
+                            dulce de leche casero y una cubierta de chocolate, cada bocado es un placer indulgente. Son
+                            el resultado de nuestra dedicación por crear productos de alta calidad que deleiten a los
+                            amantes del chocolate. ¡Prueba nuestros deliciosos alfajores y déjate llevar por su
+                            increíble sabor!</p>
                     </article>
                     <article class="card__product">
                         <h3>Galletitas</h3>
                         <img src="../img/masitas.jpg" alt="Masitas de chocolate" title="Masitas de chocolate"
                             width="200px" height="200px">
-                        <p>Nuestras galletitas con chocolate son una tentación irresistible. Cada mordisco revela una combinación perfecta de crujiente galleta y trozos de chocolate fundido. Su sabor dulce y su textura indulgente las convierten en el placer perfecto para cualquier momento del día. Disfruta de nuestras galletitas con chocolate y déjate llevar por su delicioso encanto.</p>
+                        <p>Nuestras galletitas con chocolate son una tentación irresistible. Cada mordisco revela una
+                            combinación perfecta de crujiente galleta y trozos de chocolate fundido. Su sabor dulce y su
+                            textura indulgente las convierten en el placer perfecto para cualquier momento del día.
+                            Disfruta de nuestras galletitas con chocolate y déjate llevar por su delicioso encanto.</p>
                     </article>
-                    <article class="card__product">
+                    <article class="card__product" >
                         <h3>Tortas</h3>
                         <img src="../img/cheesecake.jpg" alt="Cheesecake" title="Cheesecake" width="200px"
                             height="200px">
-                        <p>Nuestras tortas son verdaderas obras maestras, elaboradas con ingredientes frescos y de alta calidad. Cada rebanada ofrece una experiencia de sabor inigualable, convirtiendo cualquier celebración en un momento especial. Descubre el delicioso mundo de nuestras tortas y déjate sorprender por su exquisita calidad.</p>
+                        <p>Nuestras tortas son verdaderas obras maestras, elaboradas con ingredientes frescos y de alta
+                            calidad. Cada rebanada ofrece una experiencia de sabor inigualable, convirtiendo cualquier
+                            celebración en un momento especial. Descubre el delicioso mundo de nuestras tortas y déjate
+                            sorprender por su exquisita calidad.</p>
                     </article>
                     <article class="card__product">
                         <h3>Salados</h3>
                         <img src="../img/salados.jpg" alt="Sanguche" title="Sanguche" width="200px" height="200px">
-                        <p>Nuestros productos salados son una deliciosa opción para satisfacer tus antojos. Elaborados con ingredientes frescos y de calidad, ofrecen un sabor auténtico y variado. Desde empanadas hasta sándwiches y quiches, cada bocado combina sabores y texturas que te sorprenderán. Disfruta de nuestros productos salados y descubre la calidad y el sabor que nos distinguen.</p>
+                        <p>Nuestros productos salados son una deliciosa opción para satisfacer tus antojos. Elaborados
+                            con ingredientes frescos y de calidad, ofrecen un sabor auténtico y variado. Desde empanadas
+                            hasta sándwiches y quiches, cada bocado combina sabores y texturas que te sorprenderán.
+                            Disfruta de nuestros productos salados y descubre la calidad y el sabor que nos distinguen.
+                        </p>
                     </article>
             </section>
     </div>
@@ -97,7 +113,7 @@
     <!--Footer-->
     <footer>
         <div class="footer__container">
-            <div class="footer__sec_left">
+            <div class="footer__sec_left" data-aos="fade-right">
                 <h3>CONTACTO</h3>
                 <ul>
                     <li><i class="fa fa-phone" aria-hidden="true"></i>+11 5454 1234</li>
@@ -108,7 +124,7 @@
                         dulceemef@hotmail.com </li>
                 </ul>
             </div>
-            <div class="footer__sec_right">
+            <div class="footer__sec_right" data-aos="fade-left">
                 <h3>SEGUINOS EN</h3>
                 <ul>
                     <li><a href="#" class="fa fa-instagram"></a></li>
@@ -126,7 +142,10 @@
 
     </footer>
     <!--Fin Footer-->
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 <script>
     document.addEventListener('DOMContentLoaded', function () {

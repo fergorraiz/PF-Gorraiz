@@ -12,12 +12,14 @@
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title> DulceEmef: Nuestra historia</title>
 </head>
 
 <body>
     <div class="container">
-        <header>
+        <header id="top">
             <!-- Logo-->
             <div class="logo">
                 <h1>DulceEmef - Nuestra historia</h1>
@@ -60,7 +62,7 @@
             <!--About us-->
             <section class="container__aboutus">
                 <div class="section__container__encabezado">
-                    <h2>Acerca de nosotros</h2>
+                    <h2 class="animate__animated animate__backInLeft">Acerca de nosotros</h2>
                     <hr>
                 </div>
                 <div class="section__container__aboutus">
@@ -89,7 +91,7 @@
     <!--Footer-->
     <footer>
         <div class="footer__container">
-            <div class="footer__sec_left">
+            <div class="footer__sec_left" data-aos="fade-right">
                 <h3>CONTACTO</h3>
                 <ul>
                     <li><i class="fa fa-phone" aria-hidden="true"></i>+11 5454 1234</li>
@@ -100,7 +102,7 @@
                         dulceemef@hotmail.com </li>
                 </ul>
             </div>
-            <div class="footer__sec_right">
+            <div class="footer__sec_right" data-aos="fade-left">
                 <h3>SEGUINOS EN</h3>
                 <ul>
                     <li><a href="#" class="fa fa-instagram"></a></li>
@@ -118,7 +120,10 @@
 
     </footer>
     <!--Fin Footer-->
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 <script>
     document.addEventListener('DOMContentLoaded', function () {

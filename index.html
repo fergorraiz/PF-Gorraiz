@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <title> DulceEmef: Delicias para deleitar</title>
 </head>
 
@@ -64,12 +67,12 @@
             <!-- Sección Por qué elegirnos-->
             <section class="section__container">
                 <div class="section__container__encabezado">
-                    <h2>¿Por qué elegirnos?</h2>
+                    <h2 class="animate__animated animate__backInLeft">¿Por qué elegirnos?</h2>
                     <hr>
                 </div>
-                <div class="section__article">
+                <div class="section__article" data-aos="zoom-in-up" data-aos-duration="2000">
                     <!-- Article Vision-->
-                    <article class="article__card">
+                    <article class="article__card" >
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
                             x="0px" y="0px" width="1000px" height="1000px" viewBox="0 0 1000 1000"
                             enable-background="new 0 0 1000 1000" xml:space="preserve"
@@ -207,7 +210,7 @@
             <!-- Fin Sección Por qué elegirnos-->
 
             <!-- Sección Escribinos-->
-            <section class="section__escribinos">
+            <section class="section__escribinos" data-aos="flip-up" data-aos-duration="1000">
                 <h2>Escribinos</h2>
                 <form class="form__contacto" action="#" method="post">
                     <div>
@@ -243,7 +246,7 @@
     <!--Footer-->
     <footer>
         <div class="footer__container">
-            <div class="footer__sec_left">
+            <div class="footer__sec_left" data-aos="fade-right">
                 <h3>CONTACTO</h3>
                 <ul>
                     <li><i class="fa fa-phone" aria-hidden="true"></i>+11 5454 1234</li>
@@ -254,7 +257,7 @@
                         dulceemef@hotmail.com </li>
                 </ul>
             </div>
-            <div class="footer__sec_right">
+            <div class="footer__sec_right" data-aos="fade-left">
                 <h3>SEGUINOS EN</h3>
                 <ul>
                     <li><a href="#" class="fa fa-instagram"></a></li>
@@ -272,6 +275,10 @@
 
     </footer>
     <!--Fin Footer-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
