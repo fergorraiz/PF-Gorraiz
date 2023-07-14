@@ -8,6 +8,7 @@ footer {
     flex-direction: column;
     background-color: #C8CBC4;
     color: #000;
+    overflow: hidden;
 
 }
 
@@ -15,10 +16,10 @@ footer {
 .footer {
     &__container {
 
-        @include grid-1fr;
+        @include grid-1fr;        
 
         & p {
-            text-align: center;
+            text-align: center;            
         }
     }
 

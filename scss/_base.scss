@@ -97,6 +97,7 @@ textarea {
 .container {
 
     @include flex-column;
+    overflow: hidden;
 
 }
 
