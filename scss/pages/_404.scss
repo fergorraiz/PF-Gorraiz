@@ -1,5 +1,5 @@
 //ESTILOS PAGINA ERROR 404
-.container__404 {
+.container-404 {
     text-align: center;
     margin: 0;
     padding: 0;
@@ -8,25 +8,22 @@
     align-items: center;
     height: 100vh;
 
-    & h1{
+    h1 {
         font-size: 4rem;
         color: #333;
     }
 
-    & p{
+    p {
         font-size: 1.2rem;
-    color: #666;
+        color: #666;
     }
 
-    & a{
+    a {
         color: #007BFF;
-    text-decoration: none;
+        text-decoration: none;
 
-    &:hover{
-        text-decoration: underline;
-    }
+        &:hover {
+            text-decoration: underline;
+        }
     }
 }
-
-
-

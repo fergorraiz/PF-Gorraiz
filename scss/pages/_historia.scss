@@ -1,10 +1,10 @@
-.container__aboutus {
+.section-container-aboutus {
     @include flex-column;
     margin: $margin;
 
 }
 
-.section__container__aboutus {
+.section-container-aboutus__content {
 
     margin-top: 10px;
     background-color: white;
@@ -13,7 +13,6 @@
     & img {
         width: 100%;
         height: auto;
-
     }
 
     & p {
@@ -25,13 +24,13 @@
 
 
 @media(min-width:768px) {
-    .container__aboutus {
+    .section-container-aboutus {
         @include col-md;
         margin-bottom: 1rem;
     }
 
 
-    .section__container__aboutus {
+    .section-container-aboutus__content {
         margin: 0;
         margin-top: $margin;
         background-color: white;
@@ -54,13 +53,9 @@
 
 @media(min-width:1024px) and (orientation:landscape) {
 
-    .section__container__aboutus {
+    .section-container-aboutus__content {
         @include flex-row;
         align-items: center;
-
-    }
-
-    .section__container__aboutus {
         margin: 0;
         margin-top: $margin;
         background-color: white;
@@ -78,13 +73,14 @@
         & p {
             max-width: 600px;
         }
+
     }
 
 }
 
 @media(min-width:1200px) {
 
-    .container__aboutus {
+    .section-container-aboutus {
         align-items: center;
     }
 

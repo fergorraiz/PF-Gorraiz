@@ -36,7 +36,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
+
 </head>
 
 <body>
@@ -46,7 +46,7 @@
             <div class="logo">
                 <h1>DulceEmef - Inicio</h1>
                 <a href="./index.html">
-                    <img src="img/logo.png" alt="DulceEmef Logo" title="DulceEmef Logo" height="200" width="200">
+                    <img src="img/logo.png" alt="DulceEmef Logo" title="DulceEmef Logo">
                 </a>
             </div>
             <!-- Fin Logo-->
@@ -59,21 +59,11 @@
                         <span></span>
                         <span></span>
                         <ul id="menu" class="menu-hidden">
-                            <a href="./index.html">
-                                <li>Inicio</li>
-                            </a>
-                            <a href="./pages/productos.html">
-                                <li>Productos</li>
-                            </a>
-                            <a href="./pages/historia.html">
-                                <li>Historia</li>
-                            </a>
-                            <a href="./pages/contacto.html">
-                                <li>Contacto</li>
-                            </a>
-                            <a href="./pages/testimonios.html">
-                                <li>Testimonios</li>
-                            </a>
+                            <li><a href="./index.html">Inicio</a></li>
+                            <li><a href="./pages/productos.html">Productos</a></li>
+                            <li><a href="./pages/historia.html">Historia</a></li>
+                            <li><a href="./pages/contacto.html">Contacto</a></li>
+                            <li><a href="./pages/testimonios.html">Testimonios</a></li>
                         </ul>
                     </div>
                 </nav>
@@ -81,19 +71,19 @@
             <!-- Fin Menú Principal-->
         </header>
         <!--Slider-->
-        <section class="section__slider">
+        <section class="section-slider">
         </section>
         <!-- Fin Slider-->
         <main>
             <!-- Sección Por qué elegirnos-->
-            <section class="section__container">
-                <div class="section__container__encabezado">
+            <section class="section-container">
+                <div class="section-container__encabezado">
                     <h2 class="animate__animated animate__backInLeft">¿Por qué elegirnos?</h2>
                     <hr>
                 </div>
-                <div class="section__article" data-aos="zoom-in-up" data-aos-duration="2000">
+                <div class="section-article" data-aos="zoom-in-up" data-aos-duration="2000">
                     <!-- Article Vision-->
-                    <article class="article__card">
+                    <article class="section-article__card">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
                             x="0px" y="0px" width="1000px" height="1000px" viewBox="0 0 1000 1000"
                             enable-background="new 0 0 1000 1000" xml:space="preserve"
@@ -109,7 +99,7 @@
                     </article>
                     <!-- Fin Article Vision-->
                     <!-- Article Servicio-->
-                    <article class="article__card">
+                    <article class="section-article__card">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
                             x="0px" y="0px" width="1000px" height="1000px" viewBox="0 0 1000 1000"
                             enable-background="new 0 0 1000 1000" xml:space="preserve"
@@ -193,7 +183,7 @@
                     </article>
                     <!-- Fin Article Servicio-->
                     <!-- Article Envíos-->
-                    <article class="article__card">
+                    <article class="section-article__card">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
                             id="Capa_1" x="0px" y="0px" viewBox="0 0 490 490" style="enable-background:new 0 0 490 490;"
                             xml:space="preserve" class="attachment-thumbnail size-thumbnail replaced-svg">
@@ -231,24 +221,24 @@
             <!-- Fin Sección Por qué elegirnos-->
 
             <!-- Sección Escribinos-->
-            <section class="section__escribinos" data-aos="flip-up" data-aos-duration="1000">
+            <section class="section-escribinos" data-aos="flip-up" data-aos-duration="1000">
                 <h2>Escribinos</h2>
-                <form class="form__contacto" action="#" method="post">
+                <form class="form-contacto" action="#" method="post">
                     <div>
                         <label for="name">Nombre</label>
-                        <input type="text" name="name" id="" placeholder="Tú nombre (*)" required>
+                        <input type="text" name="name" id="name" placeholder="Tú nombre (*)" required>
                     </div>
                     <div>
                         <label for="email">Email</label>
-                        <input type="email" name="email" id="" placeholder="Tú email (*)" required>
+                        <input type="email" name="email" id="email" placeholder="Tú email (*)" required>
                     </div>
                     <div>
                         <label for="telefono">Teléfono</label>
-                        <input type="tel" name="telefono" id="" placeholder="Tú teléfono (*)" readonly>
+                        <input type="tel" name="telefono" id="telefono" placeholder="Tú teléfono (*)" readonly>
                     </div>
                     <div>
                         <label for="mensaje">Mensaje</label>
-                        <textarea name="mensaje" id="" cols="30" rows="10" placeholder="Tú mensaje (*)"
+                        <textarea name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Tú mensaje (*)"
                             required></textarea>
                     </div>
                     <div><span><i>Los campos con * son requeridos</i></span></div>
@@ -266,8 +256,8 @@
 
     <!--Footer-->
     <footer>
-        <div class="footer__container">
-            <div class="footer__sec_left" data-aos="fade-right">
+        <div class="footer-container">
+            <div class="footer-container__sec-left" data-aos="fade-right">
                 <h3>CONTACTO</h3>
                 <ul>
                     <li><i class="fa fa-phone" aria-hidden="true"></i>+11 5454 1234</li>
@@ -278,22 +268,20 @@
                         dulceemef@hotmail.com </li>
                 </ul>
             </div>
-            <div class="footer__sec_right" data-aos="fade-left">
+            <div class="footer-container__sec-right" data-aos="fade-left">
                 <h3>SEGUINOS EN</h3>
                 <ul>
                     <li><a href="#" class="fa fa-instagram" aria-label="Nuestro Instagram"></a></li>
-                    <li><a href="#" class="fa fa-facebook"  aria-label="Nuestro Facebook"></a></li>
-                    <li><a href="#" class="fa fa-whatsapp"  aria-label="Nuestro Whatsapp"></a></li>
+                    <li><a href="#" class="fa fa-facebook" aria-label="Nuestro Facebook"></a></li>
+                    <li><a href="#" class="fa fa-whatsapp" aria-label="Nuestro Whatsapp"></a></li>
 
                 </ul>
             </div>
-            <p class="footer__copyright">© 2023 DulceEmef. Todos los derechos reservados.</p>
-            <p class="footer__irtop"><i class="fa fa-arrow-up" aria-hidden="true"></i>
-                <a href="#top">
-                    Ir arriba</a>
+            <p class="footer-container__copyright">© 2023 DulceEmef. Todos los derechos reservados.</p>
+            <p class="footer-container__irtop"><i class="fa fa-arrow-up" aria-hidden="true"></i>
+                <a href="#top">Ir arriba</a>
             </p>
         </div>
-
     </footer>
     <!--Fin Footer-->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

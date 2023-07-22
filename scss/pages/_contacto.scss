@@ -1,12 +1,12 @@
-.section__contacto {
+.section-contacto {
     @include grid-1fr;
 }
 
-.section__container__contacto {
+.section-container__contacto {
 
     background-color: #fff;
 
-    & .form__contacto {
+    .form-contacto {
         background-color: #C8CBC4;
         margin-top: $margin;
         padding: 1rem;
@@ -16,7 +16,7 @@
 
 
 @media(min-width:768px) {
-    .section__contacto {
+    .section-contacto {
         @include col-md;
         max-width: 100%;
         margin-bottom: 0;
@@ -28,7 +28,7 @@
 
 @media(min-width:1024px) {
 
-    .section__contacto {
+    .section-contacto {
         width: 100%;
         background-image: url("../img/contact.jpg");
         background-size: contain;
@@ -36,12 +36,12 @@
         background-color: white;
     }
 
-    .section__container__contacto {
+    .section-container__contacto {
         @include flex-column;
         align-items: center;
         background-color: transparent;
 
-        & .form__contacto {
+        .form-contacto {
 
             width: 50%;
             max-width: 700px;
@@ -53,7 +53,7 @@
 
 @media(min-width:1200px) {
 
-    .section__contacto {
+    .section-contacto {
         background-size: cover;
     }
 

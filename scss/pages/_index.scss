@@ -1,4 +1,4 @@
-.section__slider {
+.section-slider {
     height: 200px;
     margin-top: 2%;
     margin-bottom: 2%;
@@ -21,49 +21,50 @@
 
 }
 
-.section__container {
+.section-container {
     @include flex-column;
     gap: 1rem;
 
 }
 
-.section__article {
+.section-article {
     @include grid-1fr;
     margin: 0;
     text-align: center;
 
 }
 
-.article__card {
+.section-article__card {
     @include flex-column;
     background-color: #ffffff;
     margin: 0 $margin;
     padding: 1rem;
 
+    svg{
+        height: 70px;
+        width: 100%;
+    }
+
 }
 
-.article__card svg {
-    height: 70px;
-    width: 100%;
-}
 
-.section__escribinos {
+.section-escribinos {
     @include grid-1fr;
 }
 
 @media(min-width:768px) {
     .section {
-        &__slider {
+        &-slider {
             background-size: 100%;
             background-repeat: no-repeat;
         }
 
-        &__escribinos,
-        &__article {
+        &-escribinos,
+        &-article {
             @include col-md;
         }
 
-        &__escribinos {
+        &-escribinos {
             padding: 1rem;
         }
     }
@@ -72,13 +73,13 @@
 
 @media(min-width:1024px) {
 
-    .section__article {
+    .section-article {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
 
     }
 
-    .article__card {
+    .section-article__card {
         border-radius: 10px;
         padding: 1rem;
         max-width: 500px;
@@ -92,9 +93,9 @@
         }
     }
 
-    .section__escribinos {
+    .section-escribinos {
 
-        & h3 {
+        h3 {
             margin-left: 0px;
         }
 
@@ -105,14 +106,14 @@
 }
 @media(min-width:1200px) {
 
-    .section__slider {
+    .section-slider {
         height: 300px;
     }
 
 }
 @media(min-width:1400px) {
 
-    .section__slider {
+    .section-slider {
         height: 400px;
     }
 

@@ -189,21 +189,17 @@ section h3 {
         transform: none;
         background: none;
         border: none;
-
-        & a {
-            &:first-child li {
-                border-left: none;
-            }
-
-            & li {
-                display: inline-block;
-                border-left: 1px rgba(104, 79, 64, 0.2) solid;
-                text-transform: uppercase;
-                padding: 1rem;
-                font-weight: 700;
-                font-size: 1.1rem;
-            }
+        li {
+            display: inline-block;
+            border-left: 1px rgba(104, 79, 64, 0.2) solid;
+            text-transform: uppercase;
+            padding: 1rem;
+            font-weight: 700;
+            font-size: 1.1rem;
+           
+            &:first-child{border-left:none;}
         }
+
     }
 
 }

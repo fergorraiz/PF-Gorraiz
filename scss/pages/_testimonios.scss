@@ -1,8 +1,8 @@
-.section__testimonios {
+.section-testimonios {
     @include flex-column;
     margin: $margin;
 
-    & article {
+    article {
         border: 1px solid #C6C8C0;
 
         &:nth-of-type(-n+3) {
@@ -14,7 +14,7 @@
         }
     }
 
-    & p {
+    p {
         line-height: 1.5rem;
         color: #808080;
     }
@@ -29,31 +29,32 @@
         background-color: #fff;
     }
 
-    & img {
+    img {
         display: block;
         margin: 10px auto;
         width: 150px;
         height: 150px;
         border-radius: 50%;
+        object-fit: cover;
     }
 
 }
 
 
-.testimonios__card__rounded {
+.card-testimonios {
 
     background-color: #fff;
     padding: 1rem;
     box-sizing: border-box;
 
-    & p {
+    p {
         box-sizing: border-box;
         text-align: center;
     }
 }
 
 @media(min-width:768px) {
-    .section__testimonios {
+    .section-testimonios {
         @include col-md;
         margin-bottom: 1rem;
     }
@@ -62,13 +63,13 @@
 
 @media(min-width:768px) and (orientation:landscape) {
 
-    .section__testimonios {
+    .section-testimonios {
 
         justify-content: center;
         align-items: center;
     }
 
-    .testimonios__card__rounded {
+    .card-testimonios {
         align-self: center;
         justify-self: center;
 
@@ -78,7 +79,7 @@
 
 @media(min-width:1200px) {
 
-    .section__testimonios {
+    .section-testimonios {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: 1fr;
@@ -86,11 +87,11 @@
             "parrafo parrafo parrafo";
         gap: 1rem;
 
-        & .section__container__encabezado {
+        .section-container__encabezado {
             grid-area: encabezado;
         }
 
-        & article {
+        article {
             border-radius: 15px 15px 15px 70px;
 
             &:nth-of-type(n+3) {
@@ -98,14 +99,14 @@
             }
         }
 
-        & p {
+        p {
             grid-area: parrafo;
             max-width: 700px;
         }
 
     }
 
-    .testimonios__card__rounded {
+    .card-testimonios {
         max-width: 400px;
         padding: 1rem;
         height: 350px;

@@ -10,20 +10,21 @@
 html {
     scroll-behavior: smooth;
 }
-
+$color-principal-fondo:  #E5E6E0;
+$color-principal-texto: #000;
 $border-color: #C6C8C0;
 $margin: 1rem;
 
 body {
     margin: 0;
     padding: 0;
-    background-color: #E5E6E0;
+    background-color: $color-principal-fondo;
     font-family: "Open sans", sans-serif;
 }
 
 a {
     text-decoration: none;
-    color: #000;
+    color: $color-principal-texto;
 
     &:focus-visible {
         outline: 1px solid #000;
@@ -110,7 +111,7 @@ section:first-child h2 {
     text-align: center;
 }
 
-.section__container__encabezado hr {
+.section-container__encabezado hr {
 
     max-width: 200px;
     margin: 0 auto;

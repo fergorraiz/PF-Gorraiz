@@ -7,34 +7,34 @@ footer {
     display: flex;
     flex-direction: column;
     background-color: #C8CBC4;
-    color: #000;
+    color: $color-principal-texto;
     overflow: hidden;
 
 }
 
 
-.footer {
-    &__container {
+.footer-container {
 
-        @include grid-1fr;        
 
-        & p {
-            text-align: center;            
-        }
+    @include grid-1fr;
+
+    p {
+        text-align: center;
     }
 
-    &__sec_left {
-        & h3 {
+
+    &__sec-left {
+        h3 {
             @include margin-bottom;
         }
     }
 
-    &__sec_right {
-        & h3 {
+    &__sec-right {
+        h3 {
             @include margin-bottom;
         }
 
-        & ul {
+        ul {
             @include flex-row;
             justify-content: center;
             gap: 1rem
@@ -43,8 +43,8 @@ footer {
 }
 
 
-.footer__irtop {
-    & a:hover {
+.footer-container__irtop {
+    a:hover {
         text-decoration: underline;
     }
 }
@@ -85,7 +85,7 @@ $color in $redes {
 }
 
 @media(min-width:768px) {
-    .footer__container {
+    .footer-container {
 
         @include col-md;
 
@@ -95,22 +95,19 @@ $color in $redes {
 
 @media(min-width:768px) and (orientation:landscape) {
 
+    .footer-container {
 
-    .footer__container {
         grid-template-columns: 1fr 1fr;
         grid-template-areas: "contacto redes"
             "footer-copyright footer-copyright"
             "irtop irtop";
-    }
 
 
-    .footer {
-
-        &__sec_left {
+        &__sec-left {
             grid-area: contacto;
         }
 
-        &__sec_right {
+        &__sec-right {
             grid-area: redes;
             justify-self: end;
         }
@@ -125,4 +122,3 @@ $color in $redes {
     }
 
 }
-
