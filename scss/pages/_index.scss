@@ -72,36 +72,32 @@
 }
 
 @media(min-width:1024px) {
-
-    .section-article {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-
-    }
-
-    .section-article__card {
-        border-radius: 10px;
-        padding: 1rem;
-        max-width: 500px;
-        transition: box-shadow 1s ease-out;
-
-        &:hover {
-            -webkit-box-shadow: 0px 0px 30px -1px rgba(0, 0, 0, 1);
-            -moz-box-shadow: 0px 0px 30px -1px rgba(0, 0, 0, 1);
-            box-shadow: 0px 0px 30px -1px rgba(0, 0, 0, 1);
-            transition: box-shadow 1s ease-in;
+    .section{
+        &-article{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+           
+            &__card{
+                border-radius: 10px;
+                padding: 1rem;
+                max-width: 500px;
+                transition: box-shadow 1s ease-out;
+        
+                &:hover {
+                    -webkit-box-shadow: 0px 0px 30px -1px rgba(0, 0, 0, 1);
+                    -moz-box-shadow: 0px 0px 30px -1px rgba(0, 0, 0, 1);
+                    box-shadow: 0px 0px 30px -1px rgba(0, 0, 0, 1);
+                    transition: box-shadow 1s ease-in;
+                }
+            }
         }
-    }
-
-    .section-escribinos {
-
-        h3 {
-            margin-left: 0px;
+        &-escribinos{
+            h3 {
+                margin-left: 0px;
+            }
         }
-
+        
     }
-
-
 
 }
 @media(min-width:1200px) {
