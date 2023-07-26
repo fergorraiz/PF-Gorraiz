@@ -8,6 +8,7 @@
     background-image: url(../img/slider.jpg);
     background-attachment: fixed;
     opacity: 0.6;
+    object-fit: cover;
     -webkit-transition: opacity 2s ease-in-out;
     -ms-transition: opacity 2s ease-in-out;
     transition: opacity 2s ease-in-out;
